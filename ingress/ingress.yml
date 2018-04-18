@@ -1,0 +1,14 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: istio-tutorial-ingress
+  namespace: istio-tutorial
+spec:
+  rules:
+  - host: customer.istio-tutorial.jimmysong.io
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: customer
+          servicePort: 8080
