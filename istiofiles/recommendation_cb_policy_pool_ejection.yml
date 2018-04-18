@@ -2,10 +2,10 @@ apiVersion: config.istio.io/v1alpha2
 kind: DestinationPolicy
 metadata:
   name: recommendation-poolejector-v1
-  namespace: tutorial
+  namespace: istio-tutorial
 spec:
   destination:
-    namespace: tutorial
+    namespace: istio-tutorial
     name: recommendation
     labels:
       version: v1
@@ -22,10 +22,10 @@ apiVersion: config.istio.io/v1alpha2
 kind: DestinationPolicy
 metadata:
   name: recommendation-poolejector-v2
-  namespace: tutorial
+  namespace: istio-tutorial
 spec:
   destination:
-    namespace: tutorial
+    namespace: istio-tutorial
     name: recommendation
     labels:
       version: v2

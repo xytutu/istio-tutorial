@@ -4,7 +4,7 @@ metadata:
   name: recommendation-mirror
 spec:
   destination:
-    namespace: tutorial
+    namespace: istio-tutorial
     name: recommendation
   precedence: 2
   route:
@@ -15,7 +15,7 @@ spec:
       version: v2
     weight: 0
   mirror:
-    namespace: tutorial
+    namespace: istio-tutorial
     name: recommendation
     labels:
       version: v2

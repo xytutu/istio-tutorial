@@ -2,7 +2,7 @@ apiVersion: config.istio.io/v1alpha2
 kind: DestinationPolicy
 metadata:
   name: recommendation-loadbalancer
-  namespace: tutorial
+  namespace: istio-tutorial
 spec:
   source:
     name: preference

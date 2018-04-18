@@ -11,7 +11,7 @@ import io.vertx.ext.web.RoutingContext;
 
 public class RecommendationVerticle extends AbstractVerticle {
 
-    private static final String RESPONSE_STRING_FORMAT = "recommendation v1 from '%s': %d\n";
+    private static final String RESPONSE_STRING_FORMAT = "recommendation v2 from '%s': %d\n";
 
     private static final String HOSTNAME = parseContainerIdFromHostname(
         System.getenv().getOrDefault("HOSTNAME", "unknown")
@@ -40,7 +40,7 @@ public class RecommendationVerticle extends AbstractVerticle {
     @Override
     public void start() throws Exception {
         Router router = Router.router(vertx);
-//        router.get("/").handler(this::timeout);
+        router.get("/").handler(this::timeout);
         router.get("/").handler(this::logging);
         router.get("/").handler(this::getRecommendations);
         router.get("/misbehave").handler(this::misbehave);

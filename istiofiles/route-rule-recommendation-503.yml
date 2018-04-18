@@ -4,7 +4,7 @@ metadata:
   name: recommendation-503
 spec:
   destination:
-    namespace: tutorial
+    namespace: istio-tutorial
     name: recommendation
   precedence: 2
   route:

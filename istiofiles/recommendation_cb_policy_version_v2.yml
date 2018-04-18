@@ -5,7 +5,7 @@ metadata:
   name: recommendation-circuitbreaker
 spec:
   destination:
-    namespace: tutorial
+    namespace: istio-tutorial
     name: recommendation
     labels:
       version: v2

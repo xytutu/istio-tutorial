@@ -21,8 +21,8 @@ spec:
       - env:
         - name: JAVA_OPTIONS
           value: -Xmx256m
-        image: example/recommendation:v2
-        imagePullPolicy: IfNotPresent
+        image: jimmysong/istio-tutorial-recommendation:v2
+        imagePullPolicy: Always
         livenessProbe:
           exec:
             command:

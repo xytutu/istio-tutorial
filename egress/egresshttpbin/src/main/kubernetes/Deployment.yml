@@ -5,6 +5,7 @@ metadata:
     app: egresshttpbin
     version: v1
   name: egresshttpbin-v1
+  namespace: istio-tutorial
 spec:
   replicas: 1
   selector:
@@ -21,7 +22,7 @@ spec:
       - env:
         - name: JAVA_OPTIONS
           value: -Xms128m -Xmx256m -Djava.net.preferIPv4Stack=true
-        image: example/egresshttpbin:v1
+        image: jimmysong/istio-tutorial-egresshttpbin:v1
         imagePullPolicy: IfNotPresent
         livenessProbe:
           exec:
