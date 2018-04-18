@@ -1,6 +1,6 @@
 #!/bin/bash
 
-URL="customer-tutorial.$(minishift ip).nip.io"
+URL="customer.istio-tutorial.jimmysong.io"
 
 while true
 do curl $URL
